@@ -2,4 +2,6 @@
     <string name="app_name">Fit Care</string>
     <string name="preferences">Preferencje</string>
     <string name="calendar">Kalendarz</string>
+    <string name="main_date_txt">TextView</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
 </resources>

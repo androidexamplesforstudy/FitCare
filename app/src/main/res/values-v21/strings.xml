@@ -2,4 +2,5 @@
 <resources>
     <string name="preferences">Preferencje</string>
     <string name="calendar">Kalendarz</string>
+    <string name="main_date_txt">TextView</string>
 </resources>
