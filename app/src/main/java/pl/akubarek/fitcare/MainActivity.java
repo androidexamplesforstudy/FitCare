@@ -4,30 +4,63 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     private Date currentDate;
     private TextView currentDatetxt;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+      //  Log.d(TAG, "onCreate: ");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         currentDatetxt = (TextView) findViewById(R.id.currentDatetxt);
         updateDatetxt();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(TAG, "onPause: ");
+        super.onPause();
 
     }
 
+    @Override
+    protected void onStart() {
+        Log.d(TAG, "onStart: ");
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(TAG, "onStop: ");
+        super.onStop();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.d(TAG, "onResume: ");
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy: ");
+        super.onDestroy();
+    }
 
     public void updateDatetxt () {
         Intent receiverFromCalendar = getIntent();
-
         int year = receiverFromCalendar.getIntExtra("YEAR", -1);
         int month = receiverFromCalendar.getIntExtra("MONTH", -1);
         int day = receiverFromCalendar.getIntExtra("DAY", -1);
@@ -37,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             currentDate = new Date();
         }
-
         currentDatetxt.setText(currentDate.toString());
     }
 
