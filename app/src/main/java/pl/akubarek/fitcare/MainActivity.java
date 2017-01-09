@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-      //  Log.d(TAG, "onCreate: ");
+        Log.d(TAG, "onCreate: ");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         currentDatetxt = (TextView) findViewById(R.id.currentDatetxt);
         updateDatetxt();
+        Log.d(TAG, "onCreate: "+ currentDate.getDay());
+        Log.d(TAG, "onCreate: "+ currentDate.getMonth());
+        Log.d(TAG, "onCreate: "+ currentDate.getYear());
     }
 
     @Override
@@ -91,10 +94,12 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.preferences:
+                Intent intentPref = new Intent (MainActivity.this, PreferencesActivity.class);
+                startActivity(intentPref);
                 return true;
             case R.id.calendar:
-                Intent intent = new Intent (MainActivity.this, CalendarActivity.class);
-                startActivity(intent);
+                Intent intentCal = new Intent (MainActivity.this, CalendarActivity.class);
+                startActivity(intentCal);
                 return true;
         }
 

@@ -4,4 +4,82 @@
     <string name="calendar">Kalendarz</string>
     <string name="main_date_txt">TextView</string>
     <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="pref_height_title">Wzrost</string>
+    <string name="pref_height_summary">Podaj wzrost w centymetrach</string>
+    <string name="pref_height_hint">0 cm</string>
+    <string name="pref_weight_title">Waga</string>
+    <string name="pref_weight_summary">Podaj wagę w kilogramach</string>
+    <string name="pref_weight_hint">0.0 kg</string>
+    <string name="pref_age_title">Wiek</string>
+    <string name="pref_age_summary">Podaj ile masz lat</string>
+    <string name="pref_age_hint">Wiek</string>
+    <string name="pref_sex_title">Płeć</string>
+    <string name="pref_sex_summary">Podaj płeć</string>
+    <string name="pref_sex_dialog_title">Wybierz płeć</string>
+    <string name="pref_activity_level_title">Poziom aktywności</string>
+    <string name="pref_activity_level_summary">Określ poziom swojej aktywności fizycznej</string>
+    <string name="pref_activity_level_dialog_title">Wybierz opcję najlepiej charakteryzującą twoją aktywność fizyczną</string>
+    <string name="pref_diet_goal_title">Cel</string>
+    <string name="pref_diet_goal_summary">Określ cel prowadzenia diety</string>
+    <string name="pref_diet_goal_dialog_title">Wybierz cel prowadzenia diety</string>
+    <string name="pref_number_of_meals_title">Liczba posiłków</string>
+    <string name="pref_number_of_meals_summary">Określ na ile posiłków chcesz podzielić dzienną dietę</string>
+    <string name="pref_number_of_meals_dialog_title">Wybierz liczbę posiłków</string>
+    <string name="pref_manual_calories_limit_decision_title">Manualne wprowadzenie limitu kalorii</string>
+    <string name="pref_manual_calories_limit_decision_summary">Włącz aby brano pod uwagę wpisany przez ciebie limit</string>
+    <string name="pref_manual_calories_limit_number_title">Manualny limit</string>
+    <string name="pref_manual_calories_limit_number_summary">Wprowadź limit kalorii</string>
+    <string name="pref_manual_calories_limit_number_hint">0 kalorii</string>
+
+    <string-array name="diet_goal_entries">
+        <item>Zmniejszenie wagi ciała</item>
+        <item>Utrzymanie wagi ciała</item>
+        <item>Zwiększenie wagi ciała</item>
+    </string-array>
+
+    <string-array name="diet_goal_values">
+        <item>WEIGHT_DOWN</item>
+        <item>WEIGHT_SAME</item>
+        <item>WEIGHT_UP</item>
+    </string-array>
+
+    <string-array name="activity_level_entries">
+        <item>Brak aktywności fizycznej</item>
+        <item>Niska (np. sprzątanie w domu, spacery)</item>
+        <item>Umiarkowana (regularne ćwiczenia 1 do 2 dni w tygodniu)</item>
+        <item>Wysoka (regularne ćwiczenia 3 4 dni w tygodniu)</item>
+        <item>Ekstremalna (regularne ćwiczenia 5-7 dni w tygoniu)</item>
+    </string-array>
+
+    <string-array name="activity_level_values">
+        <item>NONE</item>
+        <item>LOW</item>
+        <item>MEDIUM</item>
+        <item>HIGH</item>
+        <item>EXTREME</item>
+    </string-array>
+
+    <string-array name="sex_entries">
+        <item>Mężczyzna</item>
+        <item>Kobieta</item>
+    </string-array>
+
+    <string-array name="sex_values">
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+
+    <string-array name="number_of_meals_entries">
+        <item>3 posiłki</item>
+        <item>4 posiłki</item>
+        <item>5 posiłków</item>
+        <item>6 posiłków</item>
+    </string-array>
+
+    <string-array name="number_of_meals_values">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
 </resources>

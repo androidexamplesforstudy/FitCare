@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Podstawowe">
+        <EditTextPreference
+            android:key="EDITTEXT_HEIGHT"
+            android:title="@string/pref_height_title"
+            android:summary="@string/pref_height_summary"
+            android:inputType="numberDecimal"
+            android:hint="@string/pref_height_hint" />
+        <EditTextPreference
+            android:key="EDITTEXT_WEIGHT"
+            android:title="@string/pref_weight_title"
+            android:summary="@string/pref_weight_summary"
+            android:inputType="numberDecimal"
+            android:hint="@string/pref_weight_hint"/>
+        <EditTextPreference
+            android:key="EDITTEXT_AGE"
+            android:title="@string/pref_age_title"
+            android:summary="@string/pref_age_summary"
+            android:inputType="number"
+            android:hint="@string/pref_age_hint"/>
+
+        <ListPreference android:key="LIST_SEX"
+            android:title="@string/pref_sex_title"
+            android:summary="@string/pref_sex_summary"
+            android:dialogTitle="@string/pref_sex_dialog_title"
+            android:entries="@array/sex_entries"
+            android:entryValues="@array/sex_values"
+            />
+
+        <ListPreference android:key="LIST_ACTIVITY_LEVEL"
+            android:title="@string/pref_activity_level_title"
+            android:summary="@string/pref_activity_level_summary"
+            android:dialogTitle="@string/pref_activity_level_dialog_title"
+            android:entries="@array/activity_level_entries"
+            android:entryValues="@array/activity_level_values"
+            />
+
+        <ListPreference android:key="LIST_DIET_GOAL"
+            android:title="@string/pref_diet_goal_title"
+            android:summary="@string/pref_diet_goal_summary"
+            android:dialogTitle="@string/pref_diet_goal_dialog_title"
+            android:entries="@array/diet_goal_entries"
+            android:entryValues="@array/diet_goal_values"
+            android:defaultValue="WEIGHT_DOWN"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Ustawienia diety">
+        <ListPreference android:key="NUMBER_OF_MEALS"
+            android:title="@string/pref_number_of_meals_title"
+            android:summary="@string/pref_number_of_meals_summary"
+            android:dialogTitle="@string/pref_number_of_meals_dialog_title"
+            android:entries="@array/number_of_meals_entries"
+            android:entryValues="@array/number_of_meals_values"
+            android:defaultValue="5"/>
+
+        <SwitchPreference android:key="MANUAL_CALORIES_LIMIT_DECISION"
+            android:title="@string/pref_manual_calories_limit_decision_title"
+            android:summary="@string/pref_manual_calories_limit_decision_summary"
+            android:id="@+id/manual_calories_limit_choice"
+            android:defaultValue="false"/>
+
+        <EditTextPreference
+            android:key="MANUAL_CALORIES_LIMIT_NUMBER"
+            android:title="@string/pref_manual_calories_limit_number_title"
+            android:summary="@string/pref_manual_calories_limit_number_summary"
+            android:inputType="number"
+            android:hint="@string/pref_manual_calories_limit_number_hint"
+            />
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

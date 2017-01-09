@@ -28,6 +28,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pl.akubarek.fitcare.MainActivity" />
         </activity>
+
+        <activity android:name=".PreferencesActivity"/>
     </application>
 
 </manifest>
