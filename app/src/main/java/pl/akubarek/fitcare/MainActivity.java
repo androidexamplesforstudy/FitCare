@@ -1,7 +1,9 @@
 package pl.akubarek.fitcare;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -9,11 +11,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     private Date currentDate;
     private TextView currentDatetxt;
+    private SharedPreferences sharedPreferences;
 
 
     @Override
@@ -29,6 +35,59 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: "+ currentDate.getDay());
         Log.d(TAG, "onCreate: "+ currentDate.getMonth());
         Log.d(TAG, "onCreate: "+ currentDate.getYear());
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+
+    }
+
+    public void logValuesFromPreferences () {
+        int height;
+        double weight;
+        int age;
+        String sex;
+        String activityLevel;
+        String goal;
+        int numberOfMeals;
+        boolean manualCaloriesInsert;
+        int manualCaloriesLimit;
+
+        height = Integer.valueOf(sharedPreferences.getString("EDITTEXT_HEIGHT", "-1"));
+        Log.d(TAG, "logValuesFromPreferences: height = " + height);
+
+        weight = Double.valueOf(sharedPreferences.getString("EDITTEXT_WEIGHT", "-1"));
+        weight = BigDecimal.valueOf(weight).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        Log.d(TAG, "logValuesFromPreferences: weight = " + weight);
+
+        age = Integer.valueOf(sharedPreferences.getString("EDITTEXT_AGE", "-1"));
+        Log.d(TAG, "logValuesFromPreferences: age = " + age);
+
+        sex = sharedPreferences.getString("LIST_SEX", "MALE");
+        if (sex.equals("MALE")) {
+            Log.d(TAG, "logValuesFromPreferences: sex = mężczyzna");
+        } else {
+            Log.d(TAG, "logValuesFromPreferences: sex = kobieta");
+        }
+
+        activityLevel = sharedPreferences.getString("LIST_ACTIVITY_LEVEL", "-1");
+        switch (activityLevel) {
+            case "NONE":
+                Log.d(TAG, "logValuesFromPreferences: activity level is : " + activityLevel);
+                break;
+            case "LOW":
+                Log.d(TAG, "logValuesFromPreferences: activity level is : " + activityLevel);
+                break;
+            case "MEDIUM":
+                Log.d(TAG, "logValuesFromPreferences: activity level is : " + activityLevel);
+                break;
+            case "HIGH":
+                Log.d(TAG, "logValuesFromPreferences: activity level is : " + activityLevel);
+                break;
+            case "EXTREME":
+                Log.d(TAG, "logValuesFromPreferences: activity level is : " + activityLevel);
+                break;
+            default:
+                Log.d(TAG, "logValuesFromPreferences: activity level is : not insert");
+        }
     }
 
     @Override
@@ -54,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         Log.d(TAG, "onResume: ");
         super.onResume();
+        logValuesFromPreferences();
     }
 
     @Override

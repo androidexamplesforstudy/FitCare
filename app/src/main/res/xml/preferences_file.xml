@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="Podstawowe">
+    <PreferenceCategory android:title="@string/basic_information_category">
         <EditTextPreference
             android:key="EDITTEXT_HEIGHT"
             android:title="@string/pref_height_title"
             android:summary="@string/pref_height_summary"
-            android:inputType="numberDecimal"
+            android:inputType="number"
             android:hint="@string/pref_height_hint" />
         <EditTextPreference
             android:key="EDITTEXT_WEIGHT"
@@ -48,7 +48,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Ustawienia diety">
+    <PreferenceCategory android:title="@string/diet_configuration_category">
         <ListPreference android:key="NUMBER_OF_MEALS"
             android:title="@string/pref_number_of_meals_title"
             android:summary="@string/pref_number_of_meals_summary"

@@ -29,4 +29,6 @@
     <string name="pref_manual_calories_limit_number_title">Manualny limit</string>
     <string name="pref_manual_calories_limit_number_summary">Wprowadź limit kalorii</string>
     <string name="pref_manual_calories_limit_number_hint">0 kalorii</string>
+    <string name="basic_information_category">Podstawowe</string>
+    <string name="diet_configuration_category">Ustawienia diety</string>
 </resources>
