@@ -69,6 +69,7 @@
             android:summary="@string/pref_manual_calories_limit_number_summary"
             android:inputType="number"
             android:hint="@string/pref_manual_calories_limit_number_hint"
+            android:dependency="MANUAL_CALORIES_LIMIT_DECISION"
             />
     </PreferenceCategory>
 
